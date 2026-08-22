@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 1600 1150" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <text x="60" y="130" font-size="15" font-weight="bold" fill="#1a3a8f" style="white-space: pre;">THROTTLE POTENTIOMETER</text>
+  <text x="60" y="148" font-size="12" fill="#333" style="white-space: pre;">10kΩ Linear</text>
+  <circle cx="120" cy="180" r="4" fill="#c00"/>
+  <text x="60" y="184" font-size="12" fill="#c00" style="white-space: pre;">+5V</text>
+  <line x1="124" y1="180" x2="160" y2="180" stroke="#c00" stroke-width="2"/>
+  <line x1="160" y1="180" x2="160" y2="205" stroke="#c00" stroke-width="2"/>
+  <rect x="145" y="205" width="30" height="90" fill="none" stroke="#333" stroke-width="2"/>
+  <polygon points="200,250 175,244 175,256" fill="#0a7a2f"/>
+  <line x1="200" y1="250" x2="440" y2="250" stroke="#0a7a2f" stroke-width="2"/>
+  <text x="210" y="242" font-size="11" fill="#0a7a2f" style="white-space: pre;">wiper -&gt; A0</text>
+  <line x1="160" y1="295" x2="160" y2="320" stroke="#333" stroke-width="2"/>
+  <line x1="145" y1="320" x2="175" y2="320" stroke="#333" stroke-width="2"/>
+  <line x1="150" y1="326" x2="170" y2="326" stroke="#333" stroke-width="2"/>
+  <line x1="155" y1="332" x2="165" y2="332" stroke="#333" stroke-width="2"/>
+  <text x="58.698" y="508.099" font-size="15" font-weight="bold" fill="#1a3a8f" style="white-space: pre; font-size: 15px;">DIRECTION SWITCH</text>
+  <circle cx="120" cy="465" r="4" fill="#c00"/>
+  <text x="60" y="469" font-size="12" fill="#c00" style="white-space: pre;">+5V</text>
+  <line x1="124" y1="465" x2="205" y2="465" stroke="#c00" stroke-width="2"/>
+  <circle cx="210" cy="465" r="3" fill="#333"/>
+  <line x1="213" y1="463" x2="255" y2="500" stroke="#333" stroke-width="2"/>
+  <circle cx="260" cy="503" r="3" fill="#333"/>
+  <circle cx="210" cy="540" r="3" fill="#333"/>
+  <line x1="120" y1="540" x2="207" y2="540" stroke="#333" stroke-width="2"/>
+  <line x1="262.073" y1="503.487" x2="418.514" y2="503.487" stroke="#8a2be2" stroke-width="2" style=""/>
+  <line x1="308.341" y1="503" x2="308.341" y2="460" stroke="#8a2be2" stroke-width="2"/>
+  <rect x="298.341" y="420" width="20" height="40" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="324.341" y="444" font-size="11" fill="#333" style="white-space: pre; font-size: 11px;">10kΩ</text>
+  <line x1="308.341" y1="420" x2="308.341" y2="395" stroke="#c00" stroke-width="2"/>
+  <circle cx="308.341" cy="392" r="4" fill="#c00"/>
+  <text x="318.341" y="396" font-size="12" fill="#c00" style="white-space: pre; font-size: 12px;">+5V</text>
+  <line x1="308.341" y1="503" x2="308.341" y2="560" stroke="#8a2be2" stroke-width="2"/>
+  <rect x="298.341" y="560" width="20" height="40" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="324.341" y="584" font-size="11" fill="#333" style="white-space: pre; font-size: 11px;">10kΩ</text>
+  <line x1="308.341" y1="600" x2="308.341" y2="625" stroke="#333" stroke-width="2"/>
+  <line x1="293.341" y1="625" x2="323.341" y2="625" stroke="#333" stroke-width="2"/>
+  <line x1="298.341" y1="631" x2="318.341" y2="631" stroke="#333" stroke-width="2"/>
+  <line x1="303.341" y1="637" x2="313.341" y2="637" stroke="#333" stroke-width="2"/>
+  <text x="588.341" y="130" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a3a8f" style="white-space: pre; font-size: 15px;">ARDUINO NANO EVERY</text>
+  <rect x="488.341" y="150" width="230" height="420" fill="none" stroke="#1a3a8f" stroke-width="2"/>
+  <text x="500.341" y="190" font-size="13" fill="#111" style="white-space: pre; font-size: 13px;">5V</text>
+  <line x1="160" y1="180" x2="489.361" y2="180" stroke="#c00" stroke-width="2" style=""/>
+  <text x="500.341" y="255" font-size="13" fill="#111" style="white-space: pre; font-size: 13px;">A0 (Throttle)</text>
+  <line x1="328.341" y1="250" x2="488.341" y2="250" stroke="#0a7a2f" stroke-width="2"/>
+  <text x="500.341" y="507" font-size="13" fill="#8a2be2" font-weight="bold" style="white-space: pre; font-size: 13px;">A1 (Direction)</text>
+  <line x1="308.341" y1="503" x2="488.341" y2="503" stroke="#8a2be2" stroke-width="2"/>
+  <text x="647.708" y="463.482" font-size="13" fill="#111" style="white-space: pre; font-size: 13px;">D9 (PWM)</text>
+  <text x="500.341" y="304.644" font-size="13" fill="#111" style="white-space: pre; font-size: 13px;">D13 (LED)</text>
+  <line x1="488.341" y1="299.644" x2="448.341" y2="299.644" stroke="#0060c0" stroke-width="2"/>
+  <line x1="448.341" y1="299.644" x2="448.341" y2="324.644" stroke="#0060c0" stroke-width="2"/>
+  <rect x="438.341" y="324.644" width="20" height="30" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="405.493" y="342.746" font-size="11" fill="#333" style="white-space: pre; font-size: 11px;">330Ω</text>
+  <line x1="448.341" y1="354.644" x2="448.341" y2="374.644" stroke="#333" stroke-width="2"/>
+  <polygon points="433.341 374.644 463.341 374.644 448.341 397.644" fill="none" stroke="#c00" stroke-width="1.5"/>
+  <line x1="448.341" y1="397.644" x2="448.341" y2="414.644" stroke="#333" stroke-width="2"/>
+  <line x1="430.341" y1="414.644" x2="466.341" y2="414.644" stroke="#333" stroke-width="2"/>
+  <line x1="436.341" y1="420.644" x2="460.341" y2="420.644" stroke="#333" stroke-width="2"/>
+  <line x1="442.341" y1="426.644" x2="454.341" y2="426.644" stroke="#333" stroke-width="2"/>
+  <text x="374.852" y="393.688" font-size="11" fill="#333" style="white-space: pre; font-size: 11px;">Status LED</text>
+  <line x1="719.624" y1="459.741" x2="759.624" y2="459.741" stroke-width="3" style="stroke: rgb(0, 192, 10);"/>
+  <rect x="759.624" y="449.741" width="60" height="20" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="769.624" y="444.741" font-size="11" fill="#333" style="white-space: pre; font-size: 11px;">R1 1kΩ</text>
+  <line x1="819.624" y1="459.741" x2="879.624" y2="459.741" stroke-width="3" style="stroke: rgb(0, 192, 10);"/>
+  <line x1="879.624" y1="459.741" x2="879.624" y2="509.741" stroke="#333" stroke-width="2"/>
+  <line x1="864.624" y1="509.741" x2="894.624" y2="509.741" stroke="#333" stroke-width="3"/>
+  <line x1="864.624" y1="517.741" x2="894.624" y2="517.741" stroke="#333" stroke-width="1"/>
+  <text x="899.624" y="516.741" font-size="11" fill="#333" style="white-space: pre; font-size: 11px;">C1 4.7μF</text>
+  <line x1="879.624" y1="517.741" x2="879.624" y2="544.741" stroke="#333" stroke-width="2"/>
+  <line x1="864.624" y1="544.741" x2="894.624" y2="544.741" stroke="#333" stroke-width="2"/>
+  <line x1="869.624" y1="550.741" x2="889.624" y2="550.741" stroke="#333" stroke-width="2"/>
+  <line x1="874.624" y1="556.741" x2="884.624" y2="556.741" stroke="#333" stroke-width="2"/>
+  <line x1="879.624" y1="459.741" x2="879.624" y2="409.741" stroke="#8a2be2" stroke-width="1.5"/>
+  <rect x="869.624" y="369.741" width="20" height="40" fill="none" stroke="#8a2be2" stroke-width="1.5"/>
+  <text x="895.624" y="393.741" font-size="11" fill="#8a2be2" style="white-space: pre; font-size: 11px;">R2 100kΩ</text>
+  <line x1="879.624" y1="369.741" x2="879.624" y2="344.741" stroke="#c00" stroke-width="2"/>
+  <circle cx="879.624" cy="341.741" r="4" fill="#c00"/>
+  <text x="889.624" y="345.741" font-size="12" fill="#c00" style="white-space: pre; font-size: 12px;">+5V</text>
+  <line x1="879.624" y1="459.741" x2="959.624" y2="459.741" stroke="#8a2be2" stroke-width="1.5"/>
+  <line x1="966.734" y1="499.767" x2="966.734" y2="460.418" stroke="#8a2be2" stroke-width="1.5" style=""/>
+  <rect x="957.207" y="499.731" width="20" height="40" fill="none" stroke="#8a2be2" stroke-width="1.5"/>
+  <text x="983.207" y="523.731" font-size="11" fill="#8a2be2" style="white-space: pre; font-size: 11px;">R3 100kΩ</text>
+  <line x1="879.624" y1="459.741" x2="1159.62" y2="459.741" stroke-width="3" style="stroke: rgb(0, 192, 10);"/>
+  <line x1="1056.69" y1="270" x2="1170" y2="270" stroke-width="3" style="stroke: rgb(0, 192, 10);"/>
+  <line x1="1058.98" y1="269.585" x2="1058.98" y2="459.585" stroke-width="3" style="stroke: rgb(0, 192, 10);"/>
+  <line x1="1062.09" y1="460" x2="1170" y2="460" stroke-width="3" style="stroke: rgb(0, 192, 10);"/>
+  <text x="1298.1" y="200.579" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a3a8f" style="white-space: pre; font-size: 15px;">MOTOR CONTROLLERS</text>
+  <rect x="1170" y="230" width="260" height="160" fill="none" stroke="#1a3a8f" stroke-width="2"/>
+  <text x="1300" y="255" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a3a8f" style="white-space: pre;">SABERTOOTH #1</text>
+  <rect x="1183" y="264" width="22" height="14" fill="none" stroke="#111"/>
+  <text x="1188" y="275" font-size="11" fill="#111" style="white-space: pre;">S1</text>
+  <rect x="1183" y="296" width="22" height="14" fill="none" stroke="#111"/>
+  <text x="1188" y="307" font-size="11" fill="#111" style="white-space: pre;">S2</text>
+  <path d="M 1205 271 Q 1215 285 1205 303" fill="none" stroke-width="2.5" style="stroke: rgb(0, 192, 10);"/>
+  <text x="1220" y="290" font-size="10" fill="#c05000" font-style="italic" style="white-space: pre;">jumper</text>
+  <text x="1376.22" y="298.766" font-size="11" fill="#555" style="white-space: pre; font-size: 11px;">M1A/M1B</text>
+  <text x="1376.22" y="328.766" font-size="11" fill="#555" style="white-space: pre; font-size: 11px;">M2A/M2B</text>
+  <rect x="1170" y="420" width="260" height="160" fill="none" stroke="#1a3a8f" stroke-width="2"/>
+  <text x="1300" y="445" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a3a8f" style="white-space: pre;">SABERTOOTH #2</text>
+  <rect x="1183" y="454" width="22" height="14" fill="none" stroke="#111"/>
+  <text x="1188" y="465" font-size="11" fill="#111" style="white-space: pre;">S1</text>
+  <rect x="1183" y="486" width="22" height="14" fill="none" stroke="#111"/>
+  <text x="1188" y="497" font-size="11" fill="#111" style="white-space: pre;">S2</text>
+  <path d="M 1205 461 Q 1215 475 1205 493" fill="none" stroke-width="2.5" style="stroke: rgb(0, 192, 10);"/>
+  <text x="1220" y="480" font-size="10" fill="#c05000" font-style="italic" style="white-space: pre;">jumper</text>
+  <rect x="1170" y="620" width="343.197" height="174.302" fill="none" stroke="#1a3a8f" stroke-width="1.5" style=""/>
+  <text x="1185" y="645" font-size="14" font-weight="bold" fill="#1a3a8f" style="white-space: pre;">SABERTOOTH DIP SETTINGS (Analog Voltage)</text>
+  <text x="1185" y="665" font-size="11" fill="#333" style="white-space: pre;">Same on both boards -- no addressing in analog mode:</text>
+  <text x="1185" y="685" font-size="12" fill="#111" style="white-space: pre;">DIP 1 = ON    (Analog voltage control)</text>
+  <text x="1185" y="703" font-size="12" fill="#111" style="white-space: pre;">DIP 2 = ON    (Analog voltage control)</text>
+  <text style="font-size: 12px; white-space: pre;" x="1185" y="721">DIP 3 = ON    (Rely on battery BMS instead)</text>
+  <text style="font-size: 12px; white-space: pre;" x="1185" y="739">DIP 4 = OFF   (Independent: S1→M1, S2→M2)</text>
+  <text x="1185" y="757" font-size="12" fill="#111" style="white-space: pre;">DIP 5 = OFF    (Exponential response)</text>
+  <text x="1185" y="775" font-size="12" fill="#111" style="white-space: pre;">DIP 6 = ON    (Full 0-5V range)</text>
+  <line x1="609.189" y1="569.051" x2="609.189" y2="594.051" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="594.189" y1="594.051" x2="624.189" y2="594.051" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="599.189" y1="600.051" x2="619.189" y2="600.051" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="604.189" y1="606.051" x2="614.189" y2="606.051" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="120.913" y1="539.633" x2="120.913" y2="564.633" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="105.913" y1="564.633" x2="135.913" y2="564.633" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="110.913" y1="570.633" x2="130.913" y2="570.633" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="115.913" y1="576.633" x2="125.913" y2="576.633" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <rect x="1182.88" y="240.41" width="22" height="14" fill="none" stroke="#111" style="stroke-width: 1;"/>
+  <text x="1187.88" y="251.41" font-size="11" fill="#111" style="white-space: pre; stroke-width: 1; font-size: 11px;">5V</text>
+  <rect x="1183.8" y="318.145" width="22" height="14" fill="none" stroke="#111" style="stroke-width: 1;"/>
+  <text x="1188.8" y="329.145" font-size="11" fill="#111" style="white-space: pre; stroke-width: 1; font-size: 11px;">0V</text>
+  <circle cx="1129.19" cy="247.357" r="4" fill="#c00" style="stroke-width: 1;"/>
+  <text x="1069.19" y="251.357" font-size="12" fill="#c00" style="white-space: pre; stroke-width: 1; font-size: 12px;" transform="matrix(1, 0, 0, 1.126402, 29.212685, -31.891678)">+5V</text>
+  <line x1="1133.19" y1="247.357" x2="1169.19" y2="247.357" stroke="#c00" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="1140.79" y1="327.535" x2="1140.79" y2="352.535" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="1125.79" y1="352.535" x2="1155.79" y2="352.535" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="1130.79" y1="358.535" x2="1150.79" y2="358.535" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="1135.79" y1="364.535" x2="1145.79" y2="364.535" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="1140.56" y1="327.648" x2="1170.56" y2="327.648" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <circle cx="879.624" cy="459.741" r="4" style="fill: rgb(0, 192, 7);"/>
+  <line x1="967.561" y1="539.853" x2="967.561" y2="566.853" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="952.561" y1="566.853" x2="982.561" y2="566.853" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="957.563" y1="572.853" x2="977.563" y2="572.853" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="962.562" y1="578.853" x2="972.562" y2="578.853" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <rect x="1182.51" y="430.694" width="22" height="14" fill="none" stroke="#111" style="stroke-width: 1;"/>
+  <text x="1187.51" y="441.694" font-size="11" fill="#111" style="white-space: pre; stroke-width: 1; font-size: 11px;">5V</text>
+  <rect x="1183.42" y="508.429" width="22" height="14" fill="none" stroke="#111" style="stroke-width: 1;"/>
+  <text x="1188.42" y="519.429" font-size="11" fill="#111" style="white-space: pre; stroke-width: 1; font-size: 11px;">0V</text>
+  <circle cx="1128.81" cy="437.641" r="4" fill="#c00" style="stroke-width: 1;"/>
+  <text x="1069.19" y="251.357" font-size="12" fill="#c00" style="white-space: pre; stroke-width: 1; font-size: 12px;" transform="matrix(1, 0, 0, 1.126402, 28.835686, 158.391586)">+5V</text>
+  <line x1="1132.81" y1="437.641" x2="1168.81" y2="437.641" stroke="#c00" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="1140.41" y1="517.819" x2="1140.41" y2="542.819" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="1125.41" y1="542.819" x2="1155.41" y2="542.819" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="1130.41" y1="548.819" x2="1150.41" y2="548.819" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="1135.41" y1="554.819" x2="1145.41" y2="554.819" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="1140.18" y1="517.932" x2="1170.18" y2="517.932" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <rect x="1399.67" y="241.715" width="22" height="14" fill="none" stroke="#111" style="stroke-width: 1;"/>
+  <text x="1404.67" y="252.715" font-size="11" fill="#111" style="white-space: pre; stroke-width: 1; font-size: 11px;">B+</text>
+  <rect x="1399.97" y="261.597" width="22" height="14" fill="none" stroke="#111" style="stroke-width: 1;"/>
+  <text x="1404.97" y="272.597" font-size="11" fill="#111" style="white-space: pre; stroke-width: 1; font-size: 11px;">B-</text>
+  <text x="1372.83" y="488.394" font-size="11" fill="#555" style="white-space: pre; font-size: 11px; stroke-width: 1;">M1A/M1B</text>
+  <text x="1372.83" y="518.394" font-size="11" fill="#555" style="white-space: pre; font-size: 11px; stroke-width: 1;">M2A/M2B</text>
+  <rect x="1396.28" y="431.343" width="22" height="14" fill="none" stroke="#111" style="stroke-width: 1;"/>
+  <text x="1401.28" y="442.343" font-size="11" fill="#111" style="white-space: pre; stroke-width: 1; font-size: 11px;">B+</text>
+  <rect x="1396.58" y="451.225" width="22" height="14" fill="none" stroke="#111" style="stroke-width: 1;"/>
+  <text x="1401.58" y="462.225" font-size="11" fill="#111" style="white-space: pre; stroke-width: 1; font-size: 11px;">B-</text>
+  <text x="649.282" y="194.589" font-size="13" fill="#111" style="white-space: pre; font-size: 13px; stroke-width: 1;">D5 (LED)</text>
+  <line x1="876.701" y1="188.668" x2="836.701" y2="188.668" stroke="#0060c0" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="731.798" y1="177.129" x2="731.799" y2="202.129" stroke="#0060c0" stroke-width="2" style="stroke-width: 2; transform-box: fill-box; transform-origin: 50% 50%;" transform="matrix(0, -1, 1, 0, 0.000043, 0.000054)"/>
+  <rect x="812.478" y="194.754" width="20" height="30" fill="none" stroke="#333" stroke-width="1.5" style="stroke-width: 1.5; transform-box: fill-box; transform-origin: 50% 50%;" transform="matrix(0, -1, 1, 0, -63.18045, -20.128265)"/>
+  <text x="744.421" y="215.979" font-size="11" fill="#333" style="white-space: pre; font-size: 11px; stroke-width: 1;">330Ω</text>
+  <line x1="793.043" y1="170.879" x2="793.045" y2="208.378" stroke="#333" stroke-width="2" style="stroke-width: 2; transform-box: fill-box; transform-origin: 50% 50%;" transform="matrix(0, -1, 1, 0, 0.000016, -0.000003)"/>
+  <polygon points="809.646 177.073 839.646 177.073 824.646 200.073" fill="none" stroke="#c00" stroke-width="1.5" style="stroke-width: 1.5; transform-box: fill-box; transform-origin: 50% 50%;" transform="matrix(0, -1, 1, 0, 0.000024, 0.000017)"/>
+  <line x1="875.849" y1="189.428" x2="875.849" y2="206.428" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="857.849" y1="206.428" x2="893.849" y2="206.428" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="863.849" y1="212.428" x2="887.849" y2="212.428" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="869.849" y1="218.428" x2="881.849" y2="218.428" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <text x="795.321" y="219.727" font-size="11" fill="#333" style="white-space: pre; font-size: 11px; stroke-width: 1;">FWD LED</text>
+  <text x="649.139" y="272.062" font-size="13" fill="#111" style="white-space: pre; font-size: 13px; stroke-width: 1;">D6 (LED)</text>
+  <line x1="876.558" y1="266.141" x2="836.558" y2="266.141" stroke="#0060c0" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="731.655" y1="254.602" x2="731.656" y2="279.602" stroke="#0060c0" stroke-width="2" style="stroke-width: 2; transform-origin: 731.655px 267.102px;" transform="matrix(0, -1, 1, 0, -0.00003, 0.000012)"/>
+  <rect x="812.478" y="194.754" width="20" height="30" fill="none" stroke="#333" stroke-width="1.5" style="stroke-width: 1.5; transform-origin: 822.478px 209.754px;" transform="matrix(0, -1, 1, 0, -63.323303, 57.344971)"/>
+  <text x="744.278" y="293.452" font-size="11" fill="#333" style="white-space: pre; font-size: 11px; stroke-width: 1;">330Ω</text>
+  <line x1="792.901" y1="248.352" x2="792.902" y2="285.851" stroke="#333" stroke-width="2" style="stroke-width: 2; transform-origin: 792.902px 267.101px;" transform="matrix(0, -1, 1, 0, 0.000028, 0.000009)"/>
+  <polygon points="809.503 254.546 839.503 254.546 824.503 277.546" fill="none" stroke="#c00" stroke-width="1.5" style="stroke-width: 1.5; transform-origin: 824.503px 266.046px;" transform="matrix(0, -1, 1, 0, 0.000015, 0.000039)"/>
+  <line x1="875.706" y1="266.901" x2="875.706" y2="283.901" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="857.706" y1="283.901" x2="893.706" y2="283.901" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="863.706" y1="289.901" x2="887.706" y2="289.901" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <line x1="869.706" y1="295.901" x2="881.706" y2="295.901" stroke="#333" stroke-width="2" style="stroke-width: 2;"/>
+  <text x="795.178" y="297.2" font-size="11" fill="#333" style="white-space: pre; font-size: 11px; stroke-width: 1;">REV LED</text>
+</svg>
