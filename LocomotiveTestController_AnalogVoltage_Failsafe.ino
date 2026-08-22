@@ -48,6 +48,8 @@ const uint8_t THROTTLE_PIN = A0;  // 10k throttle pot wiper
 const uint8_t DIRECTION_PIN = A1; // direction switch w/ 10k/10k divider
 const uint8_t PWM_OUT_PIN = 9;    // -> R1/C1 filter -> jumpered S1/S2
 const uint8_t STATUS_LED_PIN = 13;
+const uint8_t FORWARD_LED_PIN = 5; // lit = forward, blinking = forward but throttle-locked
+const uint8_t REVERSE_LED_PIN = 6; // lit = reverse, blinking = reverse but throttle-locked
 
 // ---------- Direction switch decoding ----------
 enum Direction
@@ -93,12 +95,20 @@ unsigned long lastBlinkMs = 0;
 bool ledState = false;
 const unsigned long BLINK_INTERVAL_MS = 500;
 
+// ---------- Direction indicator LEDs ----------
+unsigned long lastDirBlinkMs = 0;
+bool dirLedBlinkState = false;
+const unsigned long DIR_BLINK_INTERVAL_MS = 250;
+
 void setup()
 {
   pinMode(PWM_OUT_PIN, OUTPUT);
   analogWrite(PWM_OUT_PIN, PWM_STOP); // defined "stop" as early as possible
 
   pinMode(STATUS_LED_PIN, OUTPUT);
+
+  pinMode(FORWARD_LED_PIN, OUTPUT);
+  pinMode(REVERSE_LED_PIN, OUTPUT);
 }
 
 void loop()
@@ -168,6 +178,7 @@ void loop()
   previousDir = dir;
 
   updateHeartbeat();
+  updateDirectionLeds(dir, throttleLocked, now);
 
   delay(20); // simple loop pacing
 }
@@ -227,6 +238,37 @@ void updateHeartbeat()
     lastBlinkMs = now;
     ledState = !ledState;
     digitalWrite(STATUS_LED_PIN, ledState ? HIGH : LOW);
+  }
+}
+
+// Lights the LED matching the selected direction: solid while that
+// direction is actually driving, blinking while locked out by the
+// re-arming interlock, dark when the switch is centered.
+void updateDirectionLeds(Direction dir, bool locked, unsigned long now)
+{
+  if (dir == DIR_NEUTRAL)
+  {
+    digitalWrite(FORWARD_LED_PIN, LOW);
+    digitalWrite(REVERSE_LED_PIN, LOW);
+    return;
+  }
+
+  uint8_t activePin = (dir == DIR_FORWARD) ? FORWARD_LED_PIN : REVERSE_LED_PIN;
+  uint8_t inactivePin = (dir == DIR_FORWARD) ? REVERSE_LED_PIN : FORWARD_LED_PIN;
+  digitalWrite(inactivePin, LOW);
+
+  if (locked)
+  {
+    if (now - lastDirBlinkMs >= DIR_BLINK_INTERVAL_MS)
+    {
+      lastDirBlinkMs = now;
+      dirLedBlinkState = !dirLedBlinkState;
+    }
+    digitalWrite(activePin, dirLedBlinkState ? HIGH : LOW);
+  }
+  else
+  {
+    digitalWrite(activePin, HIGH);
   }
 }
 
