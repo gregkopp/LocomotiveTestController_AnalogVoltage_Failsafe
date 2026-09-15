@@ -41,6 +41,12 @@
      not at zero when the board boots, the outputs stay locked at stop
      until the pot is brought to zero -- so an unexpected switch/pot
      position at startup can't cause unexpected motion either.
+
+  3) E-stop input (D7, active low): pulling D7 low ramps the throttle to
+     zero the same way a direction-switch change does, then locks it out
+     the same way -- the pot must be brought back to zero (with D7 back
+     high) before the throttle re-arms. While active, both direction LEDs
+     blink back and forth.
 */
 
 // ---------- Pin assignments ----------
@@ -50,6 +56,7 @@ const uint8_t PWM_OUT_PIN = 9;    // -> R1/C1 filter -> jumpered S1/S2
 const uint8_t STATUS_LED_PIN = 13;
 const uint8_t FORWARD_LED_PIN = 5; // lit = forward, blinking = forward but throttle-locked
 const uint8_t REVERSE_LED_PIN = 6; // lit = reverse, blinking = reverse but throttle-locked
+const uint8_t ESTOP_PIN = 7;       // pulled low by e-stop circuit to trigger emergency stop
 
 // ---------- Direction switch decoding ----------
 enum Direction
@@ -90,6 +97,10 @@ unsigned long centerStopDurationMs = 0;
 // down from the actual current command rather than jumping to zero.
 int lastCommandedSpeed = 0;
 
+// ---------- E-stop state ----------
+bool estopActive = false;
+bool previousEstopActive = false;
+
 // ---------- Heartbeat LED ----------
 unsigned long lastBlinkMs = 0;
 bool ledState = false;
@@ -109,18 +120,22 @@ void setup()
 
   pinMode(FORWARD_LED_PIN, OUTPUT);
   pinMode(REVERSE_LED_PIN, OUTPUT);
+
+  pinMode(ESTOP_PIN, INPUT_PULLUP);
 }
 
 void loop()
 {
   unsigned long now = millis();
   Direction dir = readDirection();
+  estopActive = (digitalRead(ESTOP_PIN) == LOW);
 
-  // Start a proportional ramp when entering center or when reversing
-  // direction quickly (FWD<->REV).
+  // Start a proportional ramp when entering center, reversing direction
+  // quickly (FWD<->REV), or when the e-stop input is newly asserted.
   bool enteredCenter = (dir == DIR_NEUTRAL && previousDir != DIR_NEUTRAL);
   bool flippedDirection = (dir != DIR_NEUTRAL && previousDir != DIR_NEUTRAL && dir != previousDir);
-  if (enteredCenter || flippedDirection)
+  bool estopTriggered = (estopActive && !previousEstopActive);
+  if (enteredCenter || flippedDirection || estopTriggered)
   {
     int startSpeed = lastCommandedSpeed;
     throttleLocked = true;
@@ -143,7 +158,8 @@ void loop()
   }
 
   // ---- Failsafe #2: re-arm only once the pot is confirmed at zero ----
-  if (dir != DIR_NEUTRAL && throttleLocked && throttleAtZero())
+  // (blocked entirely while the e-stop input is asserted)
+  if (dir != DIR_NEUTRAL && throttleLocked && !estopActive && throttleAtZero())
   {
     throttleLocked = false;
   }
@@ -176,9 +192,10 @@ void loop()
   analogWrite(PWM_OUT_PIN, duty);
 
   previousDir = dir;
+  previousEstopActive = estopActive;
 
   updateHeartbeat();
-  updateDirectionLeds(dir, throttleLocked, now);
+  updateDirectionLeds(dir, throttleLocked, estopActive, now);
 
   delay(20); // simple loop pacing
 }
@@ -241,21 +258,27 @@ void updateHeartbeat()
   }
 }
 
-// Lights the LED matching the selected direction: solid while that
-// direction is actually driving, blinking while locked out by the
-// re-arming interlock, dark when the switch is centered.
-void updateDirectionLeds(Direction dir, bool locked, unsigned long now)
+// Shows direction, throttle lock, and e-stop status through the LEDs.
+void updateDirectionLeds(Direction dir, bool locked, bool estopActive, unsigned long now)
 {
+  if (estopActive)
+  {
+    if (now - lastDirBlinkMs >= DIR_BLINK_INTERVAL_MS)
+    {
+      lastDirBlinkMs = now;
+      dirLedBlinkState = !dirLedBlinkState;
+    }
+    digitalWrite(FORWARD_LED_PIN, dirLedBlinkState ? HIGH : LOW);
+    digitalWrite(REVERSE_LED_PIN, dirLedBlinkState ? LOW : HIGH);
+    return;
+  }
+
   if (dir == DIR_NEUTRAL)
   {
     digitalWrite(FORWARD_LED_PIN, LOW);
     digitalWrite(REVERSE_LED_PIN, LOW);
     return;
   }
-
-  uint8_t activePin = (dir == DIR_FORWARD) ? FORWARD_LED_PIN : REVERSE_LED_PIN;
-  uint8_t inactivePin = (dir == DIR_FORWARD) ? REVERSE_LED_PIN : FORWARD_LED_PIN;
-  digitalWrite(inactivePin, LOW);
 
   if (locked)
   {
@@ -264,11 +287,13 @@ void updateDirectionLeds(Direction dir, bool locked, unsigned long now)
       lastDirBlinkMs = now;
       dirLedBlinkState = !dirLedBlinkState;
     }
-    digitalWrite(activePin, dirLedBlinkState ? HIGH : LOW);
+    digitalWrite(FORWARD_LED_PIN, dirLedBlinkState ? HIGH : LOW);
+    digitalWrite(REVERSE_LED_PIN, dirLedBlinkState ? HIGH : LOW);
   }
   else
   {
-    digitalWrite(activePin, HIGH);
+    digitalWrite(FORWARD_LED_PIN, dir == DIR_FORWARD ? HIGH : LOW);
+    digitalWrite(REVERSE_LED_PIN, dir == DIR_REVERSE ? HIGH : LOW);
   }
 }
 
